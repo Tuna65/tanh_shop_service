@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres:15.0
+    container_name: t65-user-db-dev
+    ports:
+      - '6560:5432'
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Abc123456
+      POSTGRES_DB: user_dev
+  
+  server:
+    container_name: t65-user-services-dev
+    build: .
+    image: t65-user-services-dev
+    ports:
+      - '8066:8066'
+    restart: always
+    volumes:
+      - .:/usr/src/app

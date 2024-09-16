@@ -1,0 +1,7 @@
+export enum EMessagePattern {
+  CREATE_SHOP = 'CREATE_SHOP',
+  DETAIL_SHOP = 'DETAIL_SHOP',
+  LIST_SHOP = 'LIST_SHOP',
+  DELETE_SHOP = 'DELETE_SHOP',
+  EDIT_SHOP = 'EDIT_SHOP',
+}
